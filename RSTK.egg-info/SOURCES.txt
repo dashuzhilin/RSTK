@@ -1,0 +1,6 @@
+RSTK.egg-info/PKG-INFO
+RSTK.egg-info/SOURCES.txt
+RSTK.egg-info/dependency_links.txt
+RSTK.egg-info/top_level.txt
+RSTK/Model/SVD.c
+RSTK/Model/SVD.c
