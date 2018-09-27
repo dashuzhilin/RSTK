@@ -1,5 +1,5 @@
-from .SplitData import Split
+from .DataSplit import DataSplit
 
-from .TypeTransfer import Transfer
+from .DataTransfer import DataTransfer
 
-__all__=['Split','Transfer']
+__all__=['DataSplit', 'DataTransfer']

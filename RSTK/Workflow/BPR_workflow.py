@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-from ..Model.BPR import *
+from RSTK.Model.Ranking_Model.BPR import *
 import os
 import tensorflow as tf
 

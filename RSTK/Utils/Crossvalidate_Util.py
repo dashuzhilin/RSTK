@@ -88,7 +88,7 @@ class CrossValidation(object):
             self.model.train_file = train_file
             self.model.test_file = test_file
 
-            self.model.compute()
+            self.model.run()
 
             if self.metrics is None:
                 self.metrics = self.model.evaluation.keys()

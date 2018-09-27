@@ -48,7 +48,7 @@ class LFM(object):
                     self.Q[i][k] += self.learn_rate * (self.P[u][k]*(rui - pui) - self.reg*self.Q[i][k])
             self.learn_rate *= 0.9
 
-    def predict(self):
+    def test(self):
         # print('Testing LFM.. ')
         test = DataIO(input_file=self.test_file).read()
         rmse, mae = LFMEvaluator(test_set=test, p=self.P, q=self.Q, mu=self.mu, bi=self.bi, bu=self.bu).rating()
@@ -62,6 +62,6 @@ class LFM(object):
         #     self.evaluation_results[metric.upper()] = results[metric.upper()]
         return rmse
 
-    def compute(self):
+    def run(self):
         self.train()
-        self.predict()
+        self.test()

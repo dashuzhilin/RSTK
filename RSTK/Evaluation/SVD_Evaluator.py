@@ -1,5 +1,4 @@
 from collections import namedtuple
-from ..Model import SVD
 import numpy as np
 
 

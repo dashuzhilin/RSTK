@@ -1,10 +1,11 @@
 import pandas as pd
 import random
 
-class Split(object):
+class DataSplit(object):
     # split data for training and testing
-    def __init__(self):
-        self.origin_path = 'Data/{}'
+    def __init__(self, input_file=None):
+        # self.origin_path = 'Data/{}'
+        self.input_file = input_file
 
     def split(self, M, k, seed):
 
@@ -16,7 +17,8 @@ class Split(object):
 
         # f = open(self.origin_path.format('ratings.csv'), 'r')
         # f.readline()
-        f = open(self.origin_path.format('u.data'), 'r')
+        # f = open(self.origin_path.format('u.data'), 'r')
+        f = open(self.input_file)
         line = f.readline()
         while line:
             # line_split = line.split(',')

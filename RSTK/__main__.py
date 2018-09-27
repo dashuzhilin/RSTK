@@ -1,5 +1,5 @@
 import sys
-from .DataProcess.TypeTransfer import Transfer
+from .DataProcess.DataTransfer import DataTransfer
 from .Workflow import LFM
 from .Workflow import BPR
 from .Workflow import FM

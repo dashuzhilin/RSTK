@@ -150,7 +150,7 @@ class UserKNN(KNN):
 
         return sorted(predictions, key=lambda x: x[1])
 
-    def compute(self, metrics=None):
+    def run(self, metrics=None):
         # read files
         self.train_set = ReadFile(self.train_file, sep=self.sep).read()
         self.test_set = ReadFile(self.test_file, sep=self.sep).read()
@@ -362,7 +362,7 @@ class ItemKNN(KNN):
 
         return sorted(predictions, key=lambda x: x[1])
 
-    def compute(self, metrics=None):
+    def run(self, metrics=None):
         # read files
         self.train_set = ReadFile(self.train_file, sep=self.sep).read()
         self.test_set = ReadFile(self.test_file, sep=self.sep).read()

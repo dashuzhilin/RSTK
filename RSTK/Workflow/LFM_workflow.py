@@ -2,9 +2,9 @@
 import time
 import os
 
-from ..DataProcess.SplitData import Split
+from ..DataProcess.DataSplit import DataSplit
 from ..Model.LFM import LFM
-from ..Utils.Crossvalidate import CrossValidation
+from ..Utils.Crossvalidate_Util import CrossValidation
 
 db = 'Data/u.data'
 folds_path = 'Data/'
@@ -25,4 +25,4 @@ def run():
 
     model = LFM()
     CrossValidation(source=db, model=model, targets=folds_path, n_folds=5).compute()
-    LFM(tr, te).compute()
+    LFM(tr, te).run()

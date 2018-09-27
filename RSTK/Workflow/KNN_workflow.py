@@ -2,7 +2,7 @@
 import os
 from ..Model import UserKNN
 from ..Model import ItemKNN
-from ..Utils import CrossValidation
+from ..Utils.Crossvalidate_Util import CrossValidation
 
 db = 'Data/u.data'
 folds_path = 'Data/'
@@ -16,7 +16,7 @@ def run():
 
     model = UserKNN()
     CrossValidation(source=db, model=model, targets=folds_path, n_folds=5).compute()
-    UserKNN(tr, te).compute()
+    UserKNN(tr, te).run()
 
     # model = ItemKNN()
     # CrossValidation(source=db, model=model, targets=folds_path, n_folds=5).compute()
